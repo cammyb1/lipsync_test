@@ -23,7 +23,7 @@ function start({ scene, camera }) {
   draco.setDecoderPath("https://www.gstatic.com/draco/v1/decoders/");
   loader.setDRACOLoader(draco);
 
-  loader.load("./678e2f46a8c7a3a84af55bbb.glb", (gltf) => {
+  loader.load("./model.glb", (gltf) => {
     const character = gltf.scene;
     character.name = "rpm_character";
     scene.add(gltf.scene);
