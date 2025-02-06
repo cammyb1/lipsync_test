@@ -7,3 +7,80 @@ body {
   font-family: "Roboto", sans-serif;
   background-color: #f0f0f0;
 }
+
+.actions {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.main {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  background: white;
+  justify-content: center;
+  align-items: center;
+
+  &.hidden {
+    animation: fade-out 1s;
+    animation-iteration-count: 1;
+  }
+
+  & button {
+    padding: 20px 40px;
+    font-size: 20px;
+    border: 1px solid darkgrey;
+    color: grey;
+  }
+}
+
+.center {
+  display: flex;
+  width: fit-content;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  margin: 20px;
+
+  & .dropzone {
+    border: 1px dashed black;
+    padding: 10px;
+
+    & .hover {
+      border: 1px dashed tomato;
+    }
+  }
+
+  & button:hover {
+    filter: brightness(95%);
+    border: 2px inset grey;
+  }
+
+  & button:active,
+  .active {
+    filter: brightness(125%);
+    border: 2px inset grey;
+  }
+
+  & button {
+    padding: 10px;
+    border: 2px outset grey;
+    background: rgb(28, 158, 110);
+    color: white;
+  }
+}
